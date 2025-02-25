@@ -24,6 +24,11 @@ class _ProductPageState extends State<ProductPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+       bottomNavigationBar: BottomNavigationBar(
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+        ]),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -41,7 +46,7 @@ class _ProductPageState extends State<ProductPage> {
         ],
       ),
 
-      // ✅ ADDING THE DRAWER
+     
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
@@ -82,12 +87,16 @@ class _ProductPageState extends State<ProductPage> {
         ),
       ),
 
-      body: SingleChildScrollView(
+      body:
+      
+      SingleChildScrollView(
+        
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              
               CachedNetworkImage(
                 imageUrl:
                     "https://plus.unsplash.com/premium_photo-1734111669264-5fe97ac8314c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDIzOHxKcGc2S2lkbC1Ia3x8ZW58MHx8fHx8",
@@ -149,7 +158,7 @@ class _ProductPageState extends State<ProductPage> {
                 child: ElevatedButton(
                   onPressed: () {},
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.orange,
+                    backgroundColor: const Color.fromARGB(255, 214, 11, 167),
                     padding: EdgeInsets.symmetric(vertical: 16),
                   ),
                   child: Text(
